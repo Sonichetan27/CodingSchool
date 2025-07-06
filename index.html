@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodingSchool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmu2Yc6fFufA3eHCRygLRrIL1BwdF_5U1pGS1-HUOUVSe-yhPVppI8saSTAaWMKS9OO0Y&usqp=CAU" alt="logo"></div>
+    <ul class="nav-links">
+      <li><a href="#popular">Popular</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#live">Live Courses</a></li>
+      <li><a href="#offline">Offline</a></li>
+    </ul>
+  
+   	<div class="auth-buttons">
+<!-- <%
+    String name = (String) session.getAttribute("username");
+    if (name != null) {
+        String initials = name.substring(0, 1).toUpperCase();
+%> -->
+    <div class="user-dropdown">
+         <div class="user-initials" onclick="toggleDropdown()"><!--<%= initials %> --></div>
+        <div id="dropdown" class="dropdown-content">
+            <a href="SignupServlet?action=logout" ><button>Logout</button></a>
+        </div>
+    </div>
+<!-- <%
+    } else {
+%>
+    <a href="login.html" ><button>Login</button></a>
+<%
+    }
+%> -->
+</div>
+
+  
+  </nav>
+
+  <!-- Section 1: Popular -->
+<section id="popular" class="section">
+  <h2>Popular Now</h2>
+  <div class="card-container">
+    <div class="course-card green">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="course-img" alt="DSA">
+      <h1>DSA to Development</h1>
+      <p>Complete Guide from Basics</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card purple">
+      <img src="https://cdn-icons-png.flaticon.com/512/5977/5977574.png" class="course-img" alt="Backend">
+      <h1>Backend Development</h1>
+      <p>Java Backend Live</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card olive">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854866.png" class="course-img" alt="ML">
+      <h1>ML & DS</h1>
+      <p>Machine Learning & Data Science</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card blue">
+      <img src="https://cdn-icons-png.flaticon.com/512/3039/3039403.png" class="course-img" alt="Placement">
+      <h1>Placement with DSA</h1>
+      <p>Get Job Ready</p>
+      <button>Explore</button>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Categories (No cards, so skip images here) -->
+<section id="categories" class="section">
+  <h2>Course Categories</h2>
+  <div class="category-container">
+    <div class="category orange">All</div>
+    <div class="category darkblue">Certification</div>
+    <div class="category pink">DSA / Placement</div>
+    <div class="category purple">Dev / Testing</div>
+    <div class="category green">ML / Data Science</div>
+    <div class="category grey">Programming</div>
+    <div class="category teal">Cloud / DevOps</div>
+    <div class="category dark">GATE</div>
+  </div>
+</section>
+
+<!-- Section 3: Live Courses -->
+<section id="live" class="section">
+  <h2>Live Courses</h2>
+  <div class="card-container">
+    <div class="course-card blue">
+      <img src="https://cdn-icons-png.flaticon.com/512/9614/9614723.png" class="course-img" alt="Tech Interview">
+      <h1>Tech Interview</h1>
+      <p>System Design + DSA</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card grey">
+      <img src="https://cdn-icons-png.flaticon.com/512/7216/7216980.png" class="course-img" alt="FSRNL">
+      <h1>FSRNL</h1>
+      <p>Full Stack React & Node</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card teal">
+      <img src="https://cdn-icons-png.flaticon.com/512/1802/1802979.png" class="course-img" alt="DevOps">
+      <h1>DevOps</h1>
+      <p>Production-ready Skills</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card dark">
+      <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="course-img" alt="Data Analytics">
+      <h1>Data Analytics</h1>
+      <p>SQL, Python, PowerBI</p>
+      <button>Explore</button>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Offline Courses -->
+<section id="offline" class="section">
+  <h2>Offline Classes</h2>
+  <div class="card-container">
+    <div class="course-card blue">
+      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" class="course-img" alt="MERN">
+      <h1>MERN Full Stack</h1>
+      <p>In-person Classes</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card purple">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" class="course-img" alt="OOPS">
+      <h1>Backend OOPS</h1>
+      <p>Java + Spring Boot</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card orange">
+      <img src="https://cdn-icons-png.flaticon.com/512/1148/1148405.png" class="course-img" alt="Interview DSA">
+      <h1>DSA Interview</h1>
+      <p>Master Problem Solving</p>
+      <button>Explore</button>
+    </div>
+    <div class="course-card green">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991136.png" class="course-img" alt="Analytics">
+      <h1>Analytics Program</h1>
+      <p>Excel to BI Tools</p>
+      <button>Explore</button>
+    </div>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
